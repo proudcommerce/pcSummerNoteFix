@@ -1,7 +1,7 @@
 {
-  "name": "proudcommerce/pscontactform",
-  "version": "2.0.0",
-  "description": "psContactForm",
+  "name": "proudcommerce/pcsummernotefix",
+  "version": "1.0.0",
+  "description": "pcSummerNoteFix",
   "type": "oxideshop-module",
   "license": [
     "proprietary"
@@ -22,12 +22,12 @@
   },
   "autoload": {
     "psr-4": {
-      "ProudCommerce\\ContactForm\\": "../../../source/modules/pc/contactform"
+      "ProudCommerce\\SummerNoteFix\\": "../../../source/modules/pc/summernotefix"
     }
   },
   "extra": {
     "oxideshop": {
-      "target-directory": "pc/contactform"
+      "target-directory": "pc/summernotefix"
     }
   }
 }
