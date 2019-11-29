@@ -12,6 +12,7 @@ Installation
 
 Changelog
 
+	2019-11-29	1.0.1	Fix oxloadid check (duplicates)
 	2019-04-24	1.0.0	Module release (OXID 6.x)
 	
 	

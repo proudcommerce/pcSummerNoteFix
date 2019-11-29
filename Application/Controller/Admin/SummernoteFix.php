@@ -8,7 +8,7 @@
  * @copyright (c) ProudCommerce | 2019
  * @link www.proudcommerce.com
  * @package pcSummerNoteFix
- * @version 1.0.0
+ * @version 1.0.1
  **/
 
 namespace ProudCommerce\SummerNoteFix\Application\Controller\Admin;
@@ -33,6 +33,15 @@ trait SummernoteFix
      */
     protected function saveSummernoteContent(string $modelClass, string $parameter)
     {
+        // check if loadid is unique
+        $aParams = \OxidEsales\Eshop\Core\Registry::getConfig()->getRequestParameter("editval");
+        $aParams['oxcontents__oxloadid'] = $this->_prepareIdent($aParams['oxcontents__oxloadid']);
+        if ($this->_checkIdent($aParams['oxcontents__oxloadid'], $this->getEditObjectId())) {
+            $this->_aViewData["blLoadError"] = true;
+
+            return;
+        }
+        
         /** @var MultiLanguageModel $object */
         $object = oxNew($modelClass);
         $object->loadInLang($this->_iEditLang, $this->getEditObjectId());

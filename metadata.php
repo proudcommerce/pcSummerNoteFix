@@ -8,7 +8,7 @@
  * @copyright (c) ProudCommerce | 2019
  * @link www.proudcommerce.com
  * @package pcSummerNoteFix
- * @version 1.0.0
+ * @version 1.0.1
  **/
 
 /**
@@ -24,7 +24,7 @@ $aModule = [
     'title'        => 'pcSummerNoteFix',
     'description'  => 'Behebt Smarty-Probleme nach dem Speichern des Summernote-Editors.',
     'thumbnail'    => '',
-    'version'      => '1.0.0',
+    'version'      => '1.0.1',
     'author'       => 'ProudCommerce',
     'url'          => 'https://www.proudcommerce.com',
     'email'        => 'support@proudcommerce.com',
