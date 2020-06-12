@@ -12,6 +12,7 @@ Installation
 
 Changelog
 
+	2020-06-12	1.0.2	Fix oxloadid check if no content class
 	2019-11-29	1.0.1	Fix oxloadid check (duplicates)
 	2019-04-24	1.0.0	Module release (OXID 6.x)
 	
@@ -34,5 +35,4 @@ License
 
 Copyright
 
-	Proud Sourcing GmbH 2019
-	www.proudcommerce.com / www.proudsourcing.de
+	ProudCommerce 2020 | www.proudcommerce.com

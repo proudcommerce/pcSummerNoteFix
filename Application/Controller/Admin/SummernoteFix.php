@@ -5,10 +5,10 @@
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  *
- * @copyright (c) ProudCommerce | 2019
+ * @copyright (c) ProudCommerce | 2020
  * @link www.proudcommerce.com
  * @package pcSummerNoteFix
- * @version 1.0.1
+ * @version 1.0.2
  **/
 
 namespace ProudCommerce\SummerNoteFix\Application\Controller\Admin;
@@ -34,12 +34,14 @@ trait SummernoteFix
     protected function saveSummernoteContent(string $modelClass, string $parameter)
     {
         // check if loadid is unique
-        $aParams = \OxidEsales\Eshop\Core\Registry::getConfig()->getRequestParameter("editval");
-        $aParams['oxcontents__oxloadid'] = $this->_prepareIdent($aParams['oxcontents__oxloadid']);
-        if ($this->_checkIdent($aParams['oxcontents__oxloadid'], $this->getEditObjectId())) {
-            $this->_aViewData["blLoadError"] = true;
+        if ($modelClass == 'OxidEsales\Eshop\Application\Model\Content') {
+            $aParams = \OxidEsales\Eshop\Core\Registry::getConfig()->getRequestParameter("editval");
+            $aParams['oxcontents__oxloadid'] = $this->_prepareIdent($aParams['oxcontents__oxloadid']);
+            if ($this->_checkIdent($aParams['oxcontents__oxloadid'], $this->getEditObjectId())) {
+                $this->_aViewData["blLoadError"] = true;
 
-            return;
+                return;
+            }
         }
         
         /** @var MultiLanguageModel $object */
